@@ -4,6 +4,8 @@
 module.exports = {
   swcMinify: true,
   reactStrictMode: true,
+  // We will make sure that output is statics
+  output: 'standalone',
   async rewrites() {
     return [
       {
