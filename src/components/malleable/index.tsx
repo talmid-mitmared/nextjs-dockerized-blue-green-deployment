@@ -27,7 +27,7 @@ function PreloadSlateWrapper() {
     <Suspense fallback={null}>
       <SlateWrapper As="div" id="" className="" initialText="" noop />
     </Suspense>,
-    el
+    el,
   );
 }
 
@@ -48,7 +48,7 @@ export default function Malleable({
 }) {
   const editedChildren = useMemo(
     () => edits?.find((c) => c?.id === id)?.innerText || children,
-    [edits, children, id]
+    [edits, children, id],
   );
 
   const contentRef = useRef<HTMLElement>();

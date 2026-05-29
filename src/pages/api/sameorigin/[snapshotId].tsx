@@ -17,8 +17,8 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   // https://bugs.chromium.org/p/chromium/issues/detail?id=696204
   res.write(
     `<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=/r/${encodeURIComponent(
-      snapshotId as string
-    )}" /></head>`
+      snapshotId as string,
+    )}" /></head>`,
   );
 
   res.end();

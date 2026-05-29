@@ -19,7 +19,7 @@ export default function SlateWrapper({
 }) {
   const originalState = useMemo(
     () => [{ children: [{ text: initialText }] }],
-    [initialText]
+    [initialText],
   );
   const [value, setValue] = useState<Node[]>(originalState);
 

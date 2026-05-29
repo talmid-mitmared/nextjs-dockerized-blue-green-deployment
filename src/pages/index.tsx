@@ -81,7 +81,7 @@ export default function Home(props) {
       hasSaveRequest.current = sharing;
       _setSharing(sharing);
     },
-    [hasSaveRequest, _setSharing]
+    [hasSaveRequest, _setSharing],
   );
 
   const [currentError, setError] = useState<Error>(null);
@@ -107,7 +107,7 @@ export default function Home(props) {
       .then((res) => {
         if (res.ok) return res.json();
         return new Promise(async (_, reject) =>
-          reject(new Error(await res.text()))
+          reject(new Error(await res.text())),
         );
       })
       .then(({ snapshotId }) => {
