@@ -125,10 +125,10 @@ export default function Home(props) {
   return (
     <>
       <Head>
-        <title>Green Deployment</title>
+        <title>Blue Deployment</title>
         <meta
           name="description"
-          content="Green deployment environment for a Next.js application."
+          content="Blue deployment environment for a Next.js application."
         ></meta>
       </Head>
       {currentError && (
@@ -189,63 +189,63 @@ export default function Home(props) {
 
 function Content({ isEdit, edits }: { isEdit: boolean; edits: FieldEdit[] }) {
   return (
-    <main className="green-home">
-      <section className="green-hero" aria-label="Green deployment status">
-        <div className="green-hero__glow" />
-        <div className="green-hero__content">
+    <main className="blue-home">
+      <section className="blue-hero" aria-label="Blue deployment status">
+        <div className="blue-hero__glow" />
+        <div className="blue-hero__content">
           <Malleable
-            id="green-status"
+            id="blue-status"
             as="div"
-            className="green-status"
+            className="blue-status"
             isActive={isEdit}
             edits={edits}
           >
-            Green environment is live
+            Blue environment is live
           </Malleable>
           <Malleable
-            id="green-title"
+            id="blue-title"
             as="h1"
-            className="green-title"
+            className="blue-title"
             isActive={isEdit}
             edits={edits}
           >
-            Green Deployment
+            Blue Deployment
           </Malleable>
           <Malleable
-            id="green-subtitle"
+            id="blue-subtitle"
             as="h2"
-            className="green-subtitle"
+            className="blue-subtitle"
             isActive={isEdit}
             edits={edits}
           >
-            This page is serving the green version of the application.
+            This page is serving the blue version of the application.
           </Malleable>
         </div>
 
-        <div className="green-panel" aria-hidden="true">
-          <div className="green-panel__header">
+        <div className="blue-panel" aria-hidden="true">
+          <div className="blue-panel__header">
             <span />
             <span />
             <span />
           </div>
-          <div className="green-panel__body">
-            <div className="green-ring" />
-            <strong>GREEN</strong>
+          <div className="blue-panel__body">
+            <div className="blue-ring" />
+            <strong>BLUE</strong>
             <small>ACTIVE SLOT</small>
           </div>
         </div>
       </section>
 
-      <div className="green-cards">
-        <div className="green-card">
+      <div className="blue-cards">
+        <div className="blue-card">
           <span>Slot</span>
-          <strong>Green</strong>
+          <strong>Blue</strong>
         </div>
-        <div className="green-card">
+        <div className="blue-card">
           <span>Status</span>
           <strong>Online</strong>
         </div>
-        <div className="green-card">
+        <div className="blue-card">
           <span>Traffic</span>
           <strong>Receiving</strong>
         </div>
