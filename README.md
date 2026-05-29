@@ -1,22 +1,20 @@
 
 
 
-
-
-
-
-
 https://github.com/user-attachments/assets/206bf346-6ddc-4bf4-950e-7626c0c2fde6
 
 
 # Blue-Green Deployment with Docker + Nginx
 
-This project uses a simple blue-green deployment setup for a static Next.js frontend.
+This project is just testing a simple blue-green deployment for a static Next.js frontend.
+
 
 The idea is:
 Do not replace the live app directly.
 Run the new version beside the old version.
 Then switch traffic at the proxy layer.
+
+
 
 ---
 
