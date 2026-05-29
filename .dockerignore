@@ -45,5 +45,6 @@ Dockerfile
 docker-compose.yml
 docker-compose.override.yml
 
-# Ignore build-specific cache files
+# Ignore build-specific cache files, but keep Yarn's lockfile for Docker installs.
 *.lock
+!yarn.lock
