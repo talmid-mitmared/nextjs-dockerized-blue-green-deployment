@@ -222,17 +222,17 @@ hr {
   color: var(--accents-3);
 }
 
-.blue-home {
+.green-home {
   min-height: 100vh;
   margin-top: calc(-1 * var(--gap-double));
   padding: clamp(1rem, 3vw, 3rem);
   background:
-    linear-gradient(135deg, rgba(0, 36, 89, 0.92), rgba(0, 112, 243, 0.82)),
-    #063f98;
+    linear-gradient(135deg, rgba(5, 60, 38, 0.94), rgba(12, 156, 86, 0.84)),
+    #087a45;
   color: #fff;
 }
 
-.blue-hero {
+.green-hero {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
@@ -244,7 +244,7 @@ hr {
   overflow: hidden;
 }
 
-.blue-hero__glow {
+.green-hero__glow {
   position: absolute;
   inset: 12% 8% auto auto;
   width: min(520px, 48vw);
@@ -254,12 +254,12 @@ hr {
   opacity: 0.65;
 }
 
-.blue-hero__content {
+.green-hero__content {
   position: relative;
   z-index: 1;
 }
 
-.blue-status {
+.green-status {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
@@ -268,21 +268,21 @@ hr {
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);
-  color: #dff2ff;
+  color: #ddffec;
   font-size: 0.82rem;
   font-weight: 700;
 }
 
-.blue-status::before {
+.green-status::before {
   content: "";
   width: 0.55rem;
   height: 0.55rem;
   border-radius: 50%;
-  background: #8ff0ff;
-  box-shadow: 0 0 18px rgba(143, 240, 255, 0.8);
+  background: #8dffba;
+  box-shadow: 0 0 18px rgba(141, 255, 186, 0.8);
 }
 
-.layout .blue-title {
+.layout .green-title {
   max-width: 760px;
   margin: 0;
   color: #fff;
@@ -292,42 +292,42 @@ hr {
   text-align: left;
 }
 
-.layout .blue-subtitle {
+.layout .green-subtitle {
   max-width: 680px;
   margin: 1.3rem 0 0;
-  color: #dbeeff;
+  color: #dcffe9;
   font-size: clamp(1.05rem, 2.2vw, 1.55rem);
   line-height: 1.45;
   letter-spacing: 0;
   text-align: left;
 }
 
-.blue-panel {
+.green-panel {
   position: relative;
   z-index: 1;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--radius);
-  background: rgba(3, 24, 63, 0.52);
+  background: rgba(4, 43, 28, 0.54);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(14px);
 }
 
-.blue-panel__header {
+.green-panel__header {
   display: flex;
   gap: 0.4rem;
   padding: 0.85rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.blue-panel__header span {
+.green-panel__header span {
   width: 0.65rem;
   height: 0.65rem;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.42);
 }
 
-.blue-panel__body {
+.green-panel__body {
   display: grid;
   place-items: center;
   min-height: 320px;
@@ -335,16 +335,16 @@ hr {
   text-align: center;
 }
 
-.blue-ring {
+.green-ring {
   width: 150px;
   height: 150px;
   margin-bottom: 1.5rem;
   border: 18px solid rgba(255, 255, 255, 0.14);
-  border-top-color: #8ff0ff;
+  border-top-color: #8dffba;
   border-radius: 50%;
 }
 
-.blue-panel strong {
+.green-panel strong {
   display: block;
   color: #fff;
   font-size: 3.4rem;
@@ -352,16 +352,16 @@ hr {
   letter-spacing: 0;
 }
 
-.blue-panel small {
+.green-panel small {
   display: block;
   margin-top: 0.6rem;
-  color: #98d9ff;
+  color: #a9ffc9;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0;
 }
 
-.blue-cards {
+.green-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
@@ -369,7 +369,7 @@ hr {
   margin: 0 auto;
 }
 
-.blue-card {
+.green-card {
   min-height: 118px;
   padding: 1.2rem;
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -377,14 +377,14 @@ hr {
   background: rgba(255, 255, 255, 0.12);
 }
 
-.blue-card span {
+.green-card span {
   display: block;
-  color: #b9e4ff;
+  color: #c7ffdc;
   font-size: 0.8rem;
   font-weight: 700;
 }
 
-.blue-card strong {
+.green-card strong {
   display: block;
   margin-top: 0.35rem;
   color: #fff;
@@ -393,26 +393,26 @@ hr {
 }
 
 @media (max-width: 820px) {
-  .blue-home {
+  .green-home {
     padding: 1rem;
   }
 
-  .blue-hero {
+  .green-hero {
     grid-template-columns: 1fr;
     min-height: auto;
     padding: 2rem 0;
   }
 
-  .layout .blue-title,
-  .layout .blue-subtitle {
+  .layout .green-title,
+  .layout .green-subtitle {
     text-align: left;
   }
 
-  .blue-panel__body {
+  .green-panel__body {
     min-height: 240px;
   }
 
-  .blue-cards {
+  .green-cards {
     grid-template-columns: 1fr;
   }
 }
