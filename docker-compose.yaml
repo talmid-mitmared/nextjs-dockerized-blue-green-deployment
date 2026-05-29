@@ -14,7 +14,7 @@ services:
     restart: unless-stopped
 
   blue-web:
-    image: ${BLUE_IMAGE}
+    image: ${BLUE_IMAGE:-resetmerlin/myapp-web:latest}
     platform: linux/amd64
     container_name: myapp-blue
     expose:
@@ -24,7 +24,7 @@ services:
     restart: unless-stopped
 
   green-web:
-    image: ${GREEN_IMAGE}
+    image: ${GREEN_IMAGE:-resetmerlin/myapp-web:latest}
     platform: linux/amd64
     container_name: myapp-green
     expose:
