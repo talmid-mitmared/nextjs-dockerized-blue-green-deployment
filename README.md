@@ -15,6 +15,9 @@ Run the new version beside the old version.
 Then switch traffic at the proxy layer.
 
 
+<img width="1043" height="793" alt="image" src="https://github.com/user-attachments/assets/00094aa6-33d3-4813-beac-b2284770470b" />
+
+
 
 ---
 
