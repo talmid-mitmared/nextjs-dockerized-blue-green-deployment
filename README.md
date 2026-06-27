@@ -20,6 +20,25 @@ Then switch traffic at the proxy layer.
 <img width="1043" height="793" alt="image" src="https://github.com/user-attachments/assets/00094aa6-33d3-4813-beac-b2284770470b" />
 
 
+## Motivations: Why I Built This Repository
+
+### 1. I had to study Docker because of work, so that was the main motivation.
+
+### 2. I also tried to think about a restricted, hypothetical situation.
+
+What if there was no Vercel, and no AWS infrastructure already prepared for deployment?
+
+Something like: If...I’m in 2001, I don’t have much time, but I still need to make a deployment strategy as fast as possible.
+
+The problem was that every time we deployed, users who were still using the previous version could get a bunch of errors, like missing pages or broken requests.
+
+### 3. I also care about money. I’ve founded a company before, so I know infra is basically money. One server is money. More servers means more cost.
+
+So I started thinking: what if we treat containers like servers, instead of only thinking about physical servers?
+
+That idea came from this Google paper: https://storage.googleapis.com/gweb-research2023-media/pubtools/4449.pdf
+
+
 
 
 ---
