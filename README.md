@@ -20,11 +20,11 @@ Then switch traffic at the proxy layer.
 <img width="1043" height="793" alt="image" src="https://github.com/user-attachments/assets/00094aa6-33d3-4813-beac-b2284770470b" />
 
 
-## Motivations: Why I Built This Repository
+### Motivations: Why I Built This Repository
 
-### 1. I had to study Docker because of work, so that was the main motivation.
+#### 1. I had to study Docker because of work, so that was the main motivation.
 
-### 2. I also tried to think about a restricted, hypothetical situation.
+#### 2. I also tried to think about a restricted, hypothetical situation.
 
 What if there was no Vercel, and no AWS infrastructure already prepared for deployment?
 
@@ -32,7 +32,7 @@ Something like: If...I’m in 2001, I don’t have much time, but I still need t
 
 The problem was that every time we deployed, users who were still using the previous version could get a bunch of errors, like missing pages or broken requests.
 
-### 3. I also care about money. I’ve founded a company before, so I know infra is basically money. One server is money. More servers means more cost.
+#### 3. I also care about money. I’ve founded a company before, so I know infra is basically money. One server is money. More servers means more cost.
 
 So I started thinking: what if we treat containers like servers, instead of only thinking about physical servers?
 
@@ -41,9 +41,8 @@ That idea came from this Google paper: https://storage.googleapis.com/gweb-resea
 
 
 
----
 
-## Architecture
+### Architecture
 
 User
   ↓
@@ -61,9 +60,8 @@ green-web  = another app slot
 Only `proxy` is exposed publicly.
 `blue-web` and `green-web` are reachable only inside the Docker network.
 
----
 
-## How It Works
+### How It Works
 
 `blue-web` and `green-web` run different versions of the same app.
 
@@ -97,12 +95,12 @@ If the new version fails, switch the proxy back to the old slot.
 
 ---
 
-## Appendix
+### Appendix
 
-### Docker Resource Allocation in Blue-Green Deployment
+#### Docker Resource Allocation in Blue-Green Deployment
 
-#### Q. If we run two Docker containers on a single server, do we need to reserve only half of the server resources for the active container?
-#### A. Not necessarily.
+##### Q. If we run two Docker containers on a single server, do we need to reserve only half of the server resources for the active container?
+##### A. Not necessarily.
 
 In a blue-green deployment setup, we may temporarily run two versions of the server on the same host: for example, `blue` and `green`. External traffic is routed only to the active version, while the inactive version stays idle or receives little to no traffic.
 
