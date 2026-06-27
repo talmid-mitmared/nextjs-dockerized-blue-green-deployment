@@ -21,6 +21,7 @@ Then switch traffic at the proxy layer.
 
 
 
+
 ---
 
 ## Architecture
@@ -73,4 +74,41 @@ docker compose exec proxy nginx -s reload
 ```
 
 If the new version fails, switch the proxy back to the old slot.
+
+
+---
+
+## Appendix
+
+### Docker Resource Allocation in Blue-Green Deployment
+
+#### Q. If we run two Docker containers on a single server, do we need to reserve only half of the server resources for the active container?
+#### A. Not necessarily.
+
+In a blue-green deployment setup, we may temporarily run two versions of the server on the same host: for example, `blue` and `green`. External traffic is routed only to the active version, while the inactive version stays idle or receives little to no traffic.
+
+However, running two Docker containers does not automatically split the host machine’s CPU or memory equally between them.
+
+Docker containers run on top of the host OS kernel. Containers are isolated using Linux namespaces and cgroups, but resources are not automatically divided like this:
+
+```text
+total server resources / number of containers
+```
+
+Instead, actual CPU and memory usage depends on the processes running inside each container and the traffic they receive.
+
+So, simply having two containers does not mean each container automatically gets only 50% of the server resources.
+
+#### Q. How can we control this?
+#### A. Maybe via resource constraints on Container
+
+Docker provides resource constraint options for containers, such as memory limits and CPU limits.
+
+For example, if the inactive `blue` or `green` container is not receiving traffic, we can keep it running with minimal resource usage, or explicitly limit its resource allocation.
+
+This means the active container can still use most of the server resources in normal operation, while the inactive container remains available for deployment or rollback purposes.
+
+Reference:
+https://docs.docker.com/engine/containers/resource_constraints/
+
 
